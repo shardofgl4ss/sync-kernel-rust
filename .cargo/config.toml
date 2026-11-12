@@ -1,0 +1,13 @@
+[build]
+target = "x86_64-unknown-none"
+target-dir = "target"
+build-dir = "target"
+
+
+[target.x86_64-unknown-none]
+rustflags = [
+	"-C", "no-redzone",
+	"-C", "force-frame-pointers=yes",
+	"-C", "panic=abort",
+        "-Z", "plt=no"
+]

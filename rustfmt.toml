@@ -1,0 +1,14 @@
+unstable_features = true
+style_edition = "2024"
+indent_style = "Visual"
+use_small_heuristics = "Max"
+max_width = 100
+chain_width = 80
+fn_call_width = 100
+binop_separator = "Back"
+single_line_if_else_max_width = 100
+enum_discrim_align_threshold = 40
+imports_layout = "Vertical"
+match_arm_indent = false
+match_block_trailing_comma = true
+blank_lines_upper_bound = 4

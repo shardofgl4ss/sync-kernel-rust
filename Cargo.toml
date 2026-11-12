@@ -1,0 +1,14 @@
+[profile.dev]
+strip = false
+
+[package]
+name = "syos-kernel"
+version = "0.1.0"
+edition = "2024"
+autobins = false
+
+[lib]
+crate-type = ["staticlib"]
+path = "kernel/main.rs"
+test = false
+bench = false
