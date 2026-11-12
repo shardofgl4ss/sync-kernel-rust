@@ -1,6 +1,7 @@
 # SYOS (my "little" hobby project)
 
 >This version is a rust version of sync-kernel because I want to, and its fun.
+>It will also usually be quite far behind the C version.
 
 This is a personal project, so don't expect this to be done soon, nor am I an expert or professional by any means.
 
