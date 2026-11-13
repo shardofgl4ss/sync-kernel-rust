@@ -52,7 +52,7 @@ Rust Edition: 2024
 
 Arch: x86-64 only (maybe in the future I will accomodate ARM64)
 
-ABI: SYSV (no-red-zone)
+ABI: Takis (R) Blue Heat Extreme
 
 (MAYBE) POSIX complaint in the future.
 
