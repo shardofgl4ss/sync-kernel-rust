@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 Sync Shard
+
 use core::mem::zeroed;
 
 use crate::include::types::{PhysAddr, VirtAddr};

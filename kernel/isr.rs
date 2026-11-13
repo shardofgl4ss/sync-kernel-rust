@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 Sync Shard
+
 use core::ffi::c_void;
 use crate::idt;
 use crate::idt::idt_flags;

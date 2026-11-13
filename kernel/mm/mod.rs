@@ -1,6 +1,3 @@
-// SPDX-License-Identifier: GPL-3.0-only
-// Copyright (C) 2026 Sync Shard
-
 pub mod buddy;
 pub mod slab;
 pub mod vma;
