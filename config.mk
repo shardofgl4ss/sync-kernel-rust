@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: GPL-3.0-only
+# Copyright (C) 2026 Sync Shard
+
 CC			:= x86_64-elf-gcc
 LD			:= x86_64-elf-ld
 AR			:= x86_64-elf-ar
