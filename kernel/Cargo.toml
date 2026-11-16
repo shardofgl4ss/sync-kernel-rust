@@ -1,0 +1,15 @@
+[package]
+name = "syos-kernel"
+version = "0.1.0"
+edition = "2024"
+autobins = false
+
+[lib]
+crate-type = ["staticlib"]
+path = "src/main.rs"
+bench = false
+test = false
+
+[dependencies]
+multiboot2 = { path = "../crates/multiboot2" }
+
