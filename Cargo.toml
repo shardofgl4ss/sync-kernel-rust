@@ -1,14 +1,10 @@
 [profile.dev]
 strip = false
 
-[package]
-name = "syos-kernel"
-version = "0.1.0"
-edition = "2024"
-autobins = false
+[workspace]
+resolver = "3"
+members = [
+        "kernel",
+        "crates/multiboot2",
+]
 
-[lib]
-crate-type = ["staticlib"]
-path = "kernel/main.rs"
-test = false
-bench = false
