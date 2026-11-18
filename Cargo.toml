@@ -6,5 +6,6 @@ resolver = "3"
 members = [
         "kernel",
         "crates/multiboot2",
+        "crates/syos-rbtree",
 ]
 

@@ -8,8 +8,9 @@ autobins = false
 crate-type = ["staticlib"]
 path = "src/main.rs"
 bench = false
-test = false
+# test = false
 
 [dependencies]
-multiboot2 = { path = "../crates/multiboot2" }
+multiboot2  = { path = "../crates/multiboot2" }
+syos-rbtree = { path = "../crates/syos-rbtree" }
 

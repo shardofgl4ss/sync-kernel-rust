@@ -11,4 +11,9 @@ name = "syos-kernel"
 version = "0.1.0"
 dependencies = [
  "multiboot2",
+ "syos-rbtree",
 ]
+
+[[package]]
+name = "syos-rbtree"
+version = "0.1.0"
