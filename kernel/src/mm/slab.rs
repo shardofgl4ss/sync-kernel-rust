@@ -49,6 +49,8 @@ pub struct SlabCache {
 	max_empty_slabs: u8,
 }
 
+unsafe impl Send for SlabCache {}
+
 struct Slab {
 	cache: NonNull<SlabCache>,
 
@@ -64,6 +66,25 @@ struct Slab {
 
 
 impl SlabCache {
+    pub const fn new(identifier: &'static str) -> Self {
+        Self {
+            identifier,
+            order: buddy::Order::ORDER_INVALID,
+            obj_size: 0,
+            alignment: 0,
+            pages: 0,
+            full: None,
+            partial: None,
+            empty: None,
+            objs_per_slab: 0,
+            waste: 0,
+            reserved: 0,
+            metadata: 0,
+            empty_slabs: 0,
+            max_empty_slabs: 0
+        }
+    }
+
 	pub fn free(&mut self, obj: *mut u8) {
 		let pv = obj as usize;
 		let base = pv & !(self.order.val() - 1);

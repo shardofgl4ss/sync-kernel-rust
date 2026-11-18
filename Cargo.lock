@@ -12,8 +12,13 @@ version = "0.1.0"
 dependencies = [
  "multiboot2",
  "syos-rbtree",
+ "syos-sync",
 ]
 
 [[package]]
 name = "syos-rbtree"
+version = "0.1.0"
+
+[[package]]
+name = "syos-sync"
 version = "0.1.0"

@@ -7,5 +7,6 @@ members = [
         "kernel",
         "crates/multiboot2",
         "crates/syos-rbtree",
+        "crates/syos-sync",
 ]
 

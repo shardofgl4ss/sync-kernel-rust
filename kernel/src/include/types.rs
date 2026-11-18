@@ -1,12 +1,21 @@
 // SPDX-License-Identifier: GPL-3.0-only
 // Copyright (C) 2026 Sync Shard
 
+use core::sync::atomic::AtomicUsize;
+
 #[repr(transparent)]
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Default)]
 pub struct PhysAddr(pub usize);
 #[repr(transparent)]
 #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Default)]
 pub struct VirtAddr(pub usize);
+
+#[repr(transparent)]
+#[derive(Default)]
+pub struct AtomicPhys(pub AtomicUsize);
+#[repr(transparent)]
+#[derive(Default)]
+pub struct AtomicVirt(pub AtomicUsize);
 
 const KERNEL_OFFSET: usize = 0xFFFF_FFFF_8000_0000;
 const KERNEL_PHMMAP: usize = 0xFFFF_8000_0000_0000;

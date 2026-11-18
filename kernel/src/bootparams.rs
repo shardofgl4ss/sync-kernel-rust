@@ -2,13 +2,13 @@
 // Copyright (C) 2026 Sync Shard
 
 use core::mem::zeroed;
+use syos_sync::KOnce;
 
 use crate::{
 	include::types::{
 		PhysAddr,
 		VirtAddr,
 	},
-	sync::KOnce,
 };
 
 #[repr(u8)]

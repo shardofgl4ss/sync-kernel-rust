@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only
 // Copyright (C) 2026 Sync Shard
 
+use syos_sync::*;
+
 use core::{
 	cell::Cell,
 	hint::cold_path,
@@ -27,11 +29,6 @@ use crate::{
 		page_align_down,
 	},
 	panic::kernel_panic,
-	sync::{
-		KGuard,
-		KMutex,
-		KOnce,
-	},
 };
 
 unsafe extern "C" {

@@ -13,4 +13,5 @@ bench = false
 [dependencies]
 multiboot2  = { path = "../crates/multiboot2" }
 syos-rbtree = { path = "../crates/syos-rbtree" }
+syos-sync   = { path = "../crates/syos-sync" }
 

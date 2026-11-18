@@ -6,7 +6,7 @@ use super::*;
 fn kmalloc_init() {}
 
 pub fn init() {
-	vma::init();
+	vmm::init();
 	vmalloc::init();
 	kmalloc_init();
 }

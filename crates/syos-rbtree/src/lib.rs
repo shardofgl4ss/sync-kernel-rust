@@ -13,7 +13,8 @@
  */
 
 use core::{
-    alloc::Layout, ptr::{
+    alloc::Layout,
+    ptr::{
         NonNull,
         addr_of_mut,
         null_mut,
@@ -52,6 +53,8 @@ pub enum RBErr {
 macro_rules! ptr_deref {
     ($x:expr) => { (*$x.as_ptr()) };
 }
+
+unsafe impl<T: Send> Send for Tree<T> {}
 
 /// # Safety
 /// self should be a live Node<T> and no aliasing references should exist.
