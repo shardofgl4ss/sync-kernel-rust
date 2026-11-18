@@ -9,10 +9,6 @@ pub struct PhysAddr(pub usize);
 pub struct VirtAddr(pub usize);
 
 const KERNEL_OFFSET: usize = 0xFFFF_FFFF_8000_0000;
-
-#[cfg(not(test))]
-const KERNEL_PHMMAP: usize = 0xFFFF_8000_0000_0000;
-#[cfg(test)]
 const KERNEL_PHMMAP: usize = 0xFFFF_8000_0000_0000;
 
 
@@ -29,13 +25,6 @@ impl PhysAddr {
 	}
 	pub const fn to_kcode(self) -> VirtAddr {
 		VirtAddr(self.as_usize() + KERNEL_OFFSET)
-	}
-
-	pub const fn is_invalid(self) -> bool {
-		self.as_usize() == usize::MAX
-	}
-	pub const fn is_valid(self) -> bool {
-		self.as_usize() != usize::MAX
 	}
 }
 
@@ -59,12 +48,5 @@ impl VirtAddr {
 	}
 	pub const fn kcode_to_phys(self) -> PhysAddr {
 		PhysAddr(self.as_usize() - KERNEL_OFFSET)
-	}
-
-	pub const fn is_invalid(self) -> bool {
-		self.as_usize() == usize::MAX || self.as_usize() == 0_usize
-	}
-	pub const fn is_valid(self) -> bool {
-		self.as_usize() != usize::MAX || self.as_usize() != 0_usize
 	}
 }

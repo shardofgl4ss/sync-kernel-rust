@@ -24,6 +24,7 @@ fn panic(info: &PanicInfo) -> ! {
 	unsafe { kernel_panic(info.message().as_str().unwrap_unchecked()) };
 }
 
+
 #[unsafe(no_mangle)]
 pub fn kernel_panic(_s: &str) -> ! {
 	unsafe {
@@ -34,3 +35,4 @@ pub fn kernel_panic(_s: &str) -> ! {
 		}
 	}
 }
+

@@ -722,8 +722,7 @@ pub fn buddy_alloc_range(size_bytes: usize) -> *mut u8 {
 
 		while order > req as usize {
 			order -= 1;
-			let buddy =
-				PhysAddr(VirtAddr(addr as usize).phmap_to_phys().as_usize() ^ PAGESIZE << order);
+			let buddy = PhysAddr(VirtAddr(addr as usize).phmap_to_phys().as_usize() ^ PAGESIZE << order);
 			unsafe {
 				let _ = slave.push(&mut g, buddy, Order::try_from(order).unwrap_unchecked());
 			}
